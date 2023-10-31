@@ -21,7 +21,6 @@ class Phonebook
 {
     private:
         Contact contacts[8];
-        int contacts_count;
         int index;
     public:
         Phonebook(void);
@@ -32,6 +31,7 @@ class Phonebook
         void setIndex(int index);
         void setContactsCount(int contacts_count);
         int getContactsCount(void);
+		void addContact2(void);
 };
 
 #endif

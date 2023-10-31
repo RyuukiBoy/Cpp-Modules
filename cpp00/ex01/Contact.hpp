@@ -38,7 +38,7 @@ class Contact
         std::string getPhoneNumber(void);
         std::string getDarkestSecret(void);
         void printContact(void);
-
+		void setContact(void);
 };
 
 #endif

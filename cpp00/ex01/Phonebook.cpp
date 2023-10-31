@@ -34,40 +34,32 @@ int Phonebook::getIndex(void)
     return (this->index);
 }
 
-void Phonebook::setContactsCount(int contacts_count)
+void Contact::setContact(void)
 {
-    this->contacts_count = contacts_count;
-}
+	std::string input;
 
-int Phonebook::getContactsCount(void)
-{
-    return (this->contacts_count);
+	std::cout << "First name: ";
+	std::getline(std::cin, input);
+	setFirstName(input);
+	std::cout << "Last name: ";
+	std::getline(std::cin, input);
+	setLastName(input);
+	std::cout << "Nickname: ";
+	std::getline(std::cin, input);
+	setNickname(input);
+	std::cout << "Phone number: ";
+	std::getline(std::cin, input);
+	setPhoneNumber(input);
+	std::cout << "Darkest secret: ";
+	std::getline(std::cin, input);
+	setDarkestSecret(input);
 }
 
 void Phonebook::addContact(void)
 {
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string phone_number;
-    std::string darkest_secret;
-
-    std::cout << "First name: ";
-    std::getline(std::cin, first_name);
-    std::cout << "Last name: ";
-    std::getline(std::cin, last_name);
-    std::cout << "Nickname: ";
-    std::getline(std::cin, nickname);
-    std::cout << "Phone number: ";
-    std::getline(std::cin, phone_number);
-    std::cout << "Darkest secret: ";
-    std::getline(std::cin, darkest_secret);
-    this->contacts[this->index].setFirstName(first_name);
-    this->contacts[this->index].setLastName(last_name);
-    this->contacts[this->index].setNickname(nickname);
-    this->contacts[this->index].setPhoneNumber(phone_number);
-    this->contacts[this->index].setDarkestSecret(darkest_secret);
-    this->index++;
+	int i = this->index % 8;
+	this->contacts[i].setContact();
+	this->index++;
 }
 
 std::string rep_char(std::string str)
@@ -90,7 +82,7 @@ void Phonebook::searchContact(void)
     std::cout << std::setw(10) << "Nickname" << std::endl;
     while (i < this->index)
     {
-        std::cout << std::setw(10) << i << "|";
+		std::cout << std::setw(10) << i << "|";
         std::cout << std::setw(10) << rep_char(this->contacts[i].getFirstName()) << "|";
         std::cout << std::setw(10) << rep_char(this->contacts[i].getLastName()) << "|";
         std::cout << std::setw(10) << rep_char(this->contacts[i].getNickname()) << std::endl;
@@ -99,7 +91,7 @@ void Phonebook::searchContact(void)
     std::cout << "Enter index: ";
     while (1)
     {
-        std::cin >> indexStr;
+		std::cin >> indexStr;
         std::cin.ignore();
         if (indexStr.find_first_not_of("0123456789") == std::string::npos)
         {

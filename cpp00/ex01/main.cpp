@@ -25,11 +25,11 @@ int main(void)
             break ;
         else if (command == "ADD")
         {
-            phonebook.addContact();
+			phonebook.addContact();
         }
         else if (command == "SEARCH")
         {
-            if (phonebook.getIndex() > 0)
+			if (phonebook.getIndex() > 0)
                 phonebook.searchContact();
             else
                 std::cout << "Phonebook is empty" << std::endl;

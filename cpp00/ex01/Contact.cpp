@@ -81,4 +81,3 @@ void Contact::printContact(void)
     std::cout << "Darkest secret: " << this->darkest_secret << std::endl;
 }
 
-
