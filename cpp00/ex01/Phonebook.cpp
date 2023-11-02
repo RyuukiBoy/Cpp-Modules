@@ -15,7 +15,6 @@
 Phonebook::Phonebook(void)
 {
     this->index = 0;
-    this->contacts_count = 0;
     return ;
 }
 
@@ -71,40 +70,33 @@ std::string rep_char(std::string str)
 
 void Phonebook::searchContact(void)
 {
-    int i;
-    std::string indexStr;
-    int index;
+    int i = 0;
+	int index;
+	std::string input;
 
-    i = 0;
-    std::cout << std::setw(10) << "Index" << "|";
-    std::cout << std::setw(10) << "First name" << "|";
-    std::cout << std::setw(10) << "Last name" << "|";
-    std::cout << std::setw(10) << "Nickname" << std::endl;
-    while (i < this->index)
-    {
+	std::cout << std::setw(10) << "Index" << "|";
+	std::cout << std::setw(10) << "First name" << "|";
+	std::cout << std::setw(10) << "Last name" << "|";
+	std::cout << std::setw(10) << "Nickname" << std::endl;
+	while (i < this->index)
+	{
 		std::cout << std::setw(10) << i << "|";
-        std::cout << std::setw(10) << rep_char(this->contacts[i].getFirstName()) << "|";
-        std::cout << std::setw(10) << rep_char(this->contacts[i].getLastName()) << "|";
-        std::cout << std::setw(10) << rep_char(this->contacts[i].getNickname()) << std::endl;
-        i++;
-    }
-    std::cout << "Enter index: ";
-    while (1)
-    {
-		std::cin >> indexStr;
-        std::cin.ignore();
-        if (indexStr.find_first_not_of("0123456789") == std::string::npos)
-        {
-            index = std::stoi(indexStr);
-            if (index >= 0 && index < this->index)
-            {
-                this->contacts[index].printContact();
-                break;
-            }
-            else
-                std::cout << "Invalid index. Try again: ";
-        }
-        else
-            std::cout << "Invalid index. Try again: ";
-    }
+		std::cout << std::setw(10) << rep_char(this->contacts[i].getFirstName()) << "|";
+		std::cout << std::setw(10) << rep_char(this->contacts[i].getLastName()) << "|";
+		std::cout << std::setw(10) << rep_char(this->contacts[i].getNickname()) << std::endl;
+		if ()
+		i++;
+	}
+	std::cout << "Enter index: ";
+	std::getline(std::cin, input);
+	if (input.find_first_not_of("0123456789") == std::string::npos)
+	{
+		index = atoi(input.c_str());
+		if (index >= 0 && index < this->index)
+			this->contacts[index].printContact();
+		else
+			std::cout << "Invalid index" << std::endl;
+	}
+	else
+		std::cout << "Invalid index" << std::endl;
 }
