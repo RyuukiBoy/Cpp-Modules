@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 17:32:15 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/03 17:32:15 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/05 12:16:35 by oait-bad          #+#    #+#             */
+/*   Updated: 2023/11/05 12:16:35 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,20 @@
 # define PHONEBOOK_HPP
 
 # include <iostream>
-# include <iomanip>
 # include "Contact.hpp"
 
-class Phonebook
+class PhoneBook
 {
     private:
         Contact contacts[8];
         int index;
     public:
-        Phonebook(void);
-        ~Phonebook(void);
+        PhoneBook(void);
+        ~PhoneBook(void);
         void addContact(void);
         void searchContact(void);
         int getIndex(void);
         void setIndex(int index);
-        void setContactsCount(int contacts_count);
-        int getContactsCount(void);
-		void addContact2(void);
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 14:48:41 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/05 14:48:41 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/05 12:16:22 by oait-bad          #+#    #+#             */
+/*   Updated: 2023/11/05 12:16:22 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 int main(void)
 {
-    Phonebook phonebook;
+    PhoneBook phonebook;
     std::string command;
 
     while (1)
     {
         std::cout << "Enter command: ";
-        std::getline(std::cin, command);
+        if (!std::getline(std::cin, command))
+			break;
         if (command == "EXIT")
             break ;
         else if (command == "ADD")

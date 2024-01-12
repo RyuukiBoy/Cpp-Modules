@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:28:25 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/04 12:28:25 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/05 12:16:14 by oait-bad          #+#    #+#             */
+/*   Updated: 2023/11/05 12:16:14 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
@@ -25,8 +26,6 @@ class Contact
         std::string phone_number;
         std::string darkest_secret;
     public:
-        Contact(void);
-        ~Contact(void);
         void setFirstName(std::string firstName);
         void setLastName(std::string lastName);
         void setNickname(std::string nickname);

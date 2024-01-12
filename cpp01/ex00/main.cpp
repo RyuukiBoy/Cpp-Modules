@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 18:45:27 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/15 18:45:27 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/09 14:39:04 by oait-bad          #+#    #+#             */
+/*   Updated: 2023/11/09 14:39:04 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 
     zombie = newZombie("Zombie1");
     zombie->announce();
-    delete zombie;
     randomChump("Zombie2");
+    delete zombie;
     return (0);
 }

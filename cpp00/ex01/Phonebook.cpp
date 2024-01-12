@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 17:33:15 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/03 17:33:15 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/05 12:15:51 by oait-bad          #+#    #+#             */
+/*   Updated: 2023/11/05 12:15:51 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 
-Phonebook::Phonebook(void)
+PhoneBook::PhoneBook(void)
 {
     this->index = 0;
-    return ;
+	std::cout << "Welcome to the Phonebook" << std::endl;
 }
 
-Phonebook::~Phonebook(void)
+PhoneBook::~PhoneBook(void)
 {
-    return ;
+    std::cout << "Goodbye Mate !!" << std::endl;
 }
 
-void Phonebook::setIndex(int index)
+void PhoneBook::setIndex(int index)
 {
     this->index = index;
 }
 
-int Phonebook::getIndex(void)
+int PhoneBook::getIndex(void)
 {
     return (this->index);
 }
@@ -38,23 +38,28 @@ void Contact::setContact(void)
 	std::string input;
 
 	std::cout << "First name: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return ;
 	setFirstName(input);
 	std::cout << "Last name: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return ;
 	setLastName(input);
 	std::cout << "Nickname: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return ;
 	setNickname(input);
 	std::cout << "Phone number: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return ;
 	setPhoneNumber(input);
 	std::cout << "Darkest secret: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return ;
 	setDarkestSecret(input);
 }
 
-void Phonebook::addContact(void)
+void PhoneBook::addContact(void)
 {
 	int i = this->index % 8;
 	this->contacts[i].setContact();
@@ -68,7 +73,7 @@ std::string rep_char(std::string str)
     return (str);
 }
 
-void Phonebook::searchContact(void)
+void PhoneBook::searchContact(void)
 {
     int i = 0;
 	int index;
@@ -78,17 +83,17 @@ void Phonebook::searchContact(void)
 	std::cout << std::setw(10) << "First name" << "|";
 	std::cout << std::setw(10) << "Last name" << "|";
 	std::cout << std::setw(10) << "Nickname" << std::endl;
-	while (i < this->index)
+	while (i < this->index && i < 8)
 	{
 		std::cout << std::setw(10) << i << "|";
 		std::cout << std::setw(10) << rep_char(this->contacts[i].getFirstName()) << "|";
 		std::cout << std::setw(10) << rep_char(this->contacts[i].getLastName()) << "|";
 		std::cout << std::setw(10) << rep_char(this->contacts[i].getNickname()) << std::endl;
-		if ()
 		i++;
 	}
 	std::cout << "Enter index: ";
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return ;
 	if (input.find_first_not_of("0123456789") == std::string::npos)
 	{
 		index = atoi(input.c_str());

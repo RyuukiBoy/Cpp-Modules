@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 12:32:35 by marvin            #+#    #+#             */
-/*   Updated: 2023/10/04 12:32:35 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/05 12:15:59 by oait-bad          #+#    #+#             */
+/*   Updated: 2023/11/05 12:15:59 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-
-Contact::Contact(void)
-{
-    return ;
-}
-
-Contact::~Contact(void)
-{
-    return ;
-}
 
 void Contact::setFirstName(std::string firstName)
 {

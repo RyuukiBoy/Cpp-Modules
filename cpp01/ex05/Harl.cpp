@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:07:17 by oait-bad          #+#    #+#             */
-/*   Updated: 2023/10/29 10:36:48 by oait-bad         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:53:38 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void Harl::error(void)
 void Harl::complain(std::string level)
 {
     std::string str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    void (Harl::*funcs[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    func funcs[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     for (int i = 0; i < 4; i++)
     {
         if (str[i] == level)
