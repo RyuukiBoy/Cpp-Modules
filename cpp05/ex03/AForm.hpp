@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/14 16:14:05 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/17 15:37:15 by oait-bad         ###   ########.fr       */
+/*   Created: 2024/01/16 12:03:59 by oait-bad          #+#    #+#             */
+/*   Updated: 2024/01/19 10:14:20 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AForm
     public:
         AForm(std::string const name, int const gradeToSign, int const gradeToExecute);
         AForm(AForm const & src);
-        ~AForm();
+        virtual ~AForm();
         AForm & operator=(AForm const & src);
         std::string const getName() const;
         bool getIsSigned() const;
@@ -54,22 +54,6 @@ class AForm
                     return ("Grade is too low");
                 }
         };
-        // class FormNotSignedException : public std::exception
-        // {
-        //     public:
-        //         virtual const char* what() const throw()
-        //         {
-        //             return ("Form is not signed");
-        //         }
-        // };
-        // class FormAlreadySignedException : public std::exception
-        // {
-        //     public:
-        //         virtual const char* what() const throw()
-        //         {
-        //             return ("Form is already signed");
-        //         }
-        // };
 };
 
 std::ostream & operator<<(std::ostream & o, AForm const & src);

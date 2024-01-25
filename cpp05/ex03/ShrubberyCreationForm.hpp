@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 12:48:17 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/15 13:06:08 by oait-bad         ###   ########.fr       */
+/*   Created: 2024/01/16 12:06:27 by oait-bad          #+#    #+#             */
+/*   Updated: 2024/01/16 12:06:36 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-#define PRESIDENTIALPARDONFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
+#include <fstream>
 #include "AForm.hpp"
 
-class PresidentialPardonForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
-    private :
+    private:
         std::string const target;
-    public :
-        PresidentialPardonForm(std::string const target);
-        PresidentialPardonForm(PresidentialPardonForm const & src);
-        ~PresidentialPardonForm();
-        PresidentialPardonForm & operator=(PresidentialPardonForm const & src);
+    public:
+        ShrubberyCreationForm(std::string const target);
+        ShrubberyCreationForm(ShrubberyCreationForm const & src);
+        ~ShrubberyCreationForm();
+        ShrubberyCreationForm & operator=(ShrubberyCreationForm const & src);
         void execute(Bureaucrat const & executor) const;
 };
 

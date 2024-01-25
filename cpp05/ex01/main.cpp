@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:37:46 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/14 11:20:03 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:41:55 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int main()
     std::cout << "Example 1: " << std::endl;
     try
     {
-        Bureaucrat b("b", 150);
-        Form f("f", 150, 150);
+        Bureaucrat b("b1", 1);
+        Form f("f", 1, 92);
         std::cout << b;
         std::cout << f;
         b.signForm(f);
@@ -29,10 +29,10 @@ int main()
     {
         std::cout << e.what() << std::endl;
     }
-    std::cout << "Example 2: " << std::endl;
+    std::cout << "\nExample 2: " << std::endl;
     try
     {
-        Bureaucrat b("b", 150);
+        Bureaucrat b("b2", 150);
         Form f("f", 2, 5);
         std::cout << b;
         std::cout << f;
