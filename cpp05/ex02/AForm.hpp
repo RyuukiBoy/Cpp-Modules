@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 16:14:05 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/17 15:37:15 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/01/25 13:54:09 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,22 +54,6 @@ class AForm
                     return ("Grade is too low");
                 }
         };
-        // class FormNotSignedException : public std::exception
-        // {
-        //     public:
-        //         virtual const char* what() const throw()
-        //         {
-        //             return ("Form is not signed");
-        //         }
-        // };
-        // class FormAlreadySignedException : public std::exception
-        // {
-        //     public:
-        //         virtual const char* what() const throw()
-        //         {
-        //             return ("Form is already signed");
-        //         }
-        // };
 };
 
 std::ostream & operator<<(std::ostream & o, AForm const & src);

@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:42:16 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/25 12:13:10 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/01/31 14:42:27 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int main()
 {
-    Array<int> arr(5);
+
+    Array< int> arr(5);
+
     for (unsigned int i = 0; i < arr.size(); i++)
     {
         arr[i] = i;
@@ -41,11 +43,16 @@ int main()
     {
         std::cout << "out of range" << std::endl;
     }
-    Array<int> arr3;
-    arr3 = arr;
+    Array<const int> arr3(10);
     for (unsigned int i = 0; i < arr3.size(); i++)
     {
-        arr3[i] = i;
         std::cout << arr3[i] << std::endl;
     }
+    // arr3 = arr;
+    // for (unsigned int i = 0; i < arr3.size(); i++)
+    // {
+    //     arr3[i] = i;
+    //     std::cout << arr3[i] << std::endl;
+    // }
 }
+
