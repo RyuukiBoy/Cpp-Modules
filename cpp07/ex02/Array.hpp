@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:36:06 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/29 16:32:29 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/02/13 11:39:08 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Array
         }
         Array(unsigned int n)
         {
-            arr = new T[n];
+            arr = new T[n]();
             size_n = n;
         }
         Array(Array const & src)
@@ -41,9 +41,8 @@ class Array
         {
             if (this != &src)
             {
-                delete [] this->arr;
                 this->size_n = src.size_n;
-                this->arr = new T[this->size_n];
+                this->arr = new T[this->size_n]();
                 for (unsigned int i = 0; i < this->size_n; i++)
                     this->arr[i] = src.arr[i];
             }

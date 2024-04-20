@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:25:37 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/23 14:32:46 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/02/11 09:14:34 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void identify(Base& p)
             }
             catch(std::bad_cast& e)
             {
-                std::cerr << e.what() << '\n';
+                std::cout << e.what() << '\n';
             }
         }
     }

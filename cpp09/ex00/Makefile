@@ -1,7 +1,7 @@
-NAME= Serialization
+NAME= btc
 FLAGS= -Wall -Wextra -Werror -std=c++98
 
-SRC= main.cpp Serializer.cpp
+SRC= main.cpp BitcoinExchange.cpp
 OBJ= $(SRC:.cpp=.o)
 
 all: $(NAME)

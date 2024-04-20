@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 12:10:27 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/19 11:19:09 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/02/07 22:50:59 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ AForm* Intern::makeForm(std::string name, std::string target)
     {
         if (name == formName[i])
         {
-            std::cout << "Intern creates " << name << std::endl;
+            std::cout << "Intern creates " << name << " (" << target << ")" << std::endl;
             resultForm = form[i];
         }
     }

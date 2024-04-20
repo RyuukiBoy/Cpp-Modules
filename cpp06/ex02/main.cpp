@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:27:39 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/23 14:32:43 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/02/11 09:15:23 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int main()
 {
-    srand(time(NULL));
     Base *b = generate();
     identify(b);
     identify(*b);

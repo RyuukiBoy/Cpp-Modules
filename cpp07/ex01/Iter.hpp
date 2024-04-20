@@ -6,7 +6,7 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 10:16:12 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/25 10:28:34 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/02/13 11:52:47 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 #include <iostream>
 
-template <typename T>
-void iter(T* array, size_t len, void (*f)(T const &))
+template <typename T, typename T1>
+void iter(T* array, size_t len, void (*f)(T1 &))
 {
     if (!array)
         return ;
-    for (int i = 0 ; i < len ; i++)
+    for (size_t i = 0 ; i < len ; i++)
         f(array[i]);
 }
 

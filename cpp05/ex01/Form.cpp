@@ -6,14 +6,14 @@
 /*   By: oait-bad <oait-bad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 19:23:19 by oait-bad          #+#    #+#             */
-/*   Updated: 2024/01/18 10:13:27 by oait-bad         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:35:33 by oait-bad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form(std::string const name, int const gradeToSign, int const gradeToExecute) : name(name), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute) , isSigned(false)
+Form::Form(std::string const name, int const gradeToSign, int const gradeToExecute) : name(name) , isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute)
 {
     if (gradeToSign < 1 || gradeToExecute < 1)
         throw GradeTooHighException();
